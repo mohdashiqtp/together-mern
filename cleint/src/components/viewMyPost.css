@@ -1,0 +1,40 @@
+.viewMyPost{
+    justify-content: space-between;
+    padding: 36px;
+  
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;    border-radius: 24px 24px 0 0;
+    border: 1px solid #0000002b;
+}
+.following_ets{
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.image{
+    padding: 26px; 
+}
+.following{
+    margin-right: 24px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 139px 201px;
+    padding: 26px;
+    border: 1px solid #0000002b;
+    width:504px;
+    height: 340px;
+    
+    
+}
+    
+
+  .column {
+    height: 300px;
+  }

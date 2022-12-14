@@ -1,0 +1,25 @@
+* {box-sizing: border-box}
+.profile_{
+
+    height: 740px;
+    width: 1000px !important;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 20px auto 20px auto ;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-bottom: 1px solid rgba(145, 143, 143, 0.152);
+    
+}
+.left_profile{
+    width: 60%;
+}
+.right_profile{
+    width: 40%;
+}
+.view_profile{
+    display: flex;
+}

@@ -1,0 +1,28 @@
+.Friend{
+    border: 1px solid rgba(209, 199, 199, 0.621);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+.friend_left{
+    display: flex;
+    align-items: center;
+}
+.friend_right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+    padding: 10px;
+}
+.buttons{
+    border-radius: 10px;
+    background: rgba(120, 114, 114, 0.354);
+    color: white;
+    padding: 5px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

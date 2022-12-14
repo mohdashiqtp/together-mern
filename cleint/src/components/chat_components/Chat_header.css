@@ -1,0 +1,23 @@
+.body_header{
+
+}
+.left_chat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile{
+
+    margin-right: 10px;
+
+}
+.body_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.right_chat{
+    
+    display: flex;
+    margin-left: 92px;
+}

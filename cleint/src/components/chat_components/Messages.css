@@ -1,0 +1,12 @@
+.Messages{
+    border: 1px solid rgba(225, 229, 229, 0.552);
+    display: flex;
+    border-radius: 10px;
+    width: 400px;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px;
+}
+.message > p{
+    color: rgba(137, 129, 129, 0.547);
+}

@@ -1,0 +1,10 @@
+.chat_Header{
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(145, 143, 143, 0.152);
+    width: 100%;
+    padding: 30px;
+}
