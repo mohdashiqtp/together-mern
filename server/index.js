@@ -48,13 +48,14 @@ app.use('/user/coversations', conversation )
 app.use('/user/conversations/messages' , messages )
 
 
+// production 
 
-if(process.env.NODE_ENV == 'production'){
-    app.use(express.static(path.join(__dirname , '../cleint/build')))
-    app.get('*' , (req , res) => {
-        res.sendFile(path.resolve(__dirname , '../cleint/build/index.html'))
-    })
-}
+// if(process.env.NODE_ENV == 'production'){
+//     app.use(express.static(path.join(__dirname , '../cleint/build')))
+//     app.get('*' , (req , res) => {
+//         res.sendFile(path.resolve(__dirname , '../cleint/build/index.html'))
+//     })
+// }
 
 
 //mongo db
