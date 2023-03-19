@@ -30,9 +30,8 @@ function App() {
 
             <Route path='/' element={< Home />} /> 
             
-            : alert('please Login') }
-
-            <Route path='/' element={< Home />} /> 
+            : window.location.assign('/login') }
+            
 
             <Route path ='/profile' element={<Profile/>}/>
             <Route path='/chats:id' element={<Chats/>} />

@@ -13,14 +13,18 @@ function EditProfile() {
 
   const data = useContext(GlobalContext)
 
-  console.log(data)
-  
+
 
   const [user, setUser] = useState({
 
     name: '',
     email: '',
-    number: ''
+    number: '',
+    gender : '',
+    lookingfor:'',
+    place:'',
+    interest:''
+
 
   })
 
@@ -28,7 +32,7 @@ function EditProfile() {
   const handleSubmit = async (e) => {
 
     e.preventDefault()
-    
+
     let formData = new FormData()
 
     formData.append('profile', profile.data)
@@ -40,19 +44,27 @@ function EditProfile() {
     formData.append('number', user.number)
 
     formData.append('email', user.email)
-
     
+    formData.append('email', user.place)
+    
+    formData.append('email', user.interest)
+    
+    formData.append('email', user.gender)
+    
+    formData.append('email', user.lookingfor)
+
+
     try {
 
       const res = axios.post(`http://localhost:5000/user/edit_profile `, formData, {
 
         withCredentials: true
-  
+
       })
 
       alert("updated")
 
-    } catch(err) {
+    } catch (err) {
 
       alert("failed please try again")
 
@@ -101,12 +113,12 @@ function EditProfile() {
       <div className="image">
         {
           preview && (
-            
-            <img alt="Remy Sharp" src={preview}  />
+
+            <img className='image_profile' alt="Remy Sharp" src={preview} />
 
           )
         }
-        <input type="file" name='image' onChange={handleFileChange} />
+        <input type="file" name='image'  onChange={handleFileChange} />
       </div>
 
       <div className="name">
@@ -119,13 +131,39 @@ function EditProfile() {
         <input type="text" name="number" onChange={handleChange} />
       </div>
 
-      <div className="name">
-        <span>Email</span>
-        <input type="email" name="email" onChange={handleChange} />
+      <div className="gender">
+        <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+      
+
+      <div className="place">
+        <span>Place</span>
+        <input type="text" name="place" onChange={handleChange} />
+      </div>
+      <div className="looking for">
+        <label for="gender">Looking For:</label>
+      <select id="gender" name="lookingfor">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+      
+      <div className="interest">
+        <span>Interests</span>
+        <input type="text" name="interest" onChange={handleChange} />
       </div>
 
+
+      <div className="continue">
       <div className="button">
-        <button onClick={handleSubmit} >Submit</button>
+        <a onClick={handleSubmit} >Continue</a>
+      </div>
       </div>
 
     </div>

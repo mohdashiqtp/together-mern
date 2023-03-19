@@ -36,6 +36,22 @@ const UserSchema = new mongoose.Schema({
   profile_id: {
     type: String
   },
+  lookingfor:{
+    type: String
+
+  },
+  place:{
+    type: String
+
+  },
+  gender:{
+    type: String
+
+  },
+  interest:{
+    type: String
+
+  },
 
   friends: [
     {

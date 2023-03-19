@@ -10,3 +10,21 @@
     display: flex;
     align-items: center;
 }
+.continue{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: pink;
+}
+.image_profile{
+    border-radius: 150px;
+}
