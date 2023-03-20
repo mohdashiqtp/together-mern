@@ -33,7 +33,7 @@
 	z-index: -1;
 }
 .inputfile + label {
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 700;
     color: white;
     background-color: rgb(146, 142, 142);

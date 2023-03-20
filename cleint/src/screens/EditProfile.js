@@ -56,7 +56,7 @@ function EditProfile() {
 
     try {
 
-      const res = axios.post(`http://localhost:5000/user/edit_profile `, formData, {
+      const res = axios.post(`${process.env.REACT_APP_SERVER_URL}/user/editprofile`, formData, {
 
         withCredentials: true
 

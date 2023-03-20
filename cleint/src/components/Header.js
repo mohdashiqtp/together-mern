@@ -20,7 +20,7 @@ function Header(props) {
 
         try {
 
-            axios.get('http://localhost:5000/user/logout').then((res) => {
+            axios.get(`${process.env.REACT_APP_SERVER_URL}/user/logout`).then((res) => {
 
                 window.location.assign('/login')
 

@@ -34,7 +34,7 @@ function Home() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:5000/user/getall', {
+        axios.get(`${process.env.REACT_APP_SERVER_URL}/user/getall`, {
 
             headers: {
 
@@ -64,7 +64,7 @@ function Home() {
 
     const peopleClicked = async (user) => {
 
-        axios.post(`http://localhost:5000/friends/addfriend${user._id}/${id}`, {
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/friends/addfriend${user._id}/${id}`, {
 
             headers: {
 
@@ -95,7 +95,7 @@ function Home() {
         try {
 
 
-            const result = await axios.get("http://localhost:5000/user/search", search)
+            const result = await axios.get(`${process.env.REACT_APP_SERVER_URL}/user/search`, search)
 
             console.log(result)
 

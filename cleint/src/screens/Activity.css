@@ -1,9 +1,4 @@
-* {
-    box-sizing: border-box
-}
-
-.chats {
-
+.activity{
     width: 1000px !important;
     height: 100%;
     margin: 20px auto 20px auto;
@@ -14,20 +9,13 @@
     object-fit: contain !important;
 
 }
-.start_conversation{
-    padding: 10px;
-    height : 550px ;
-    /* overflow-y: scroll; */
-    width: 350px;
-}
-.chat_body{
-    display: flex;
-    justify-content: space-evenly;
+.activity_body{
+    height: 500px;
     width: 100%;
 }
-.chat_left{
-    width: 30%;
-}
-.chat_right{
-    width: 70%;
+.notification{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

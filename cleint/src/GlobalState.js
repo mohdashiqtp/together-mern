@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
 
         const refreshToken = async () => {
 
-            const responce = await axios.get('http://localhost:5000/user/refreshtoken', {
+            const responce = await axios.get(`${process.env.REACT_APP_SERVER_URL}/user/refreshtoken`, {
 
                 withCredentials: true
                 

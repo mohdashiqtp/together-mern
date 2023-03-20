@@ -28,23 +28,23 @@ function Navigation() {
 
             </div>
             <div className="_icon">
-
-                <IconButton>
-                    < SearchIcon />
-                </IconButton>
-
+                <Link to='/match'>
+                    <IconButton>
+                        < SearchIcon />
+                    </IconButton>
+                </Link>
             </div>
             <div className="_icon">
-
-                <IconButton>
-                    < CircleNotificationsIcon />
-                </IconButton>
-
+                <Link to='/user/activity'>
+                    <IconButton>
+                        < CircleNotificationsIcon />
+                    </IconButton>
+                </Link>
             </div>
             <div className="_icon">
                 <Link to='/profile'>
                     <IconButton>
-                        <Avatar alt="Remy Sharp" src={data.Data.userApi.Data.profile}  />
+                        <Avatar alt="Remy Sharp" src={data.Data.userApi.Data.profile} />
                     </IconButton>
                 </Link>
             </div>

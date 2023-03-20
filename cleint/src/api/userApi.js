@@ -18,16 +18,11 @@ const UserApi = (token) => {
 
     const [username,setUsername] = useState('')
 
-
     const [id , setId] = useState()
 
-   
-        
     useEffect(() => {
 
-
-
-        axios.get('http://localhost:5000/user/infor' , {
+        axios.get(`${process.env.REACT_APP_SERVER_URL}/user/infor` , {
 
             headers: {
 

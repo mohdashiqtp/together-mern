@@ -19,6 +19,9 @@ const user = useContext(GlobalContext)
         <div className="header">
             <Header isprofile={true} />
         </div>
+        <div className="heading_profile">
+            <h1>Profile...</h1>
+        </div>
 
         <div className="view_profile">
 

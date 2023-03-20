@@ -29,7 +29,7 @@ function Singup() {
 
         event.preventDefault()
     
-        axios.post('http://localhost:5000/user/singup'  , { ...user }
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/user/singup` , { ...user }
         , {
             withCredentials:true
         }

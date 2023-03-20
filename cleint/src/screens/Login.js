@@ -44,11 +44,13 @@ function Login() {
 
     const handleLogin = (e) => {
 
+        console.log(process.env.SERVER_URL)
+
         e.preventDefault()
 
         //submit our data to backend and return the result 
 
-        axios.post('http://localhost:5000/user/login' , {...user} , {
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/user/login` , {...user} , {
             withCredentials:true
         }).
         then((res) => {

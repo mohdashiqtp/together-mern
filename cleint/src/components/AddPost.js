@@ -38,7 +38,7 @@ function AddPost() {
         formData.append('captions', post.captions)
         formData.append('imageData', previewSource)
 
-        axios.post('http://localhost:5000/posts/addpost', formData, {
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/posts/addpost`, formData, {
 
             headers: {
 

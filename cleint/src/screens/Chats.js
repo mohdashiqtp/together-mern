@@ -12,6 +12,7 @@ import { Rings } from 'react-loader-spinner'
 import { io } from 'socket.io-client'
 import './chats.css'
 import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 
 
 
@@ -29,7 +30,7 @@ function Chats() {
 
   useEffect(() => {
 
-    axios.get('http://localhost:5000/user/getall', {
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/user/getall`, {
 
       headers: {
 
@@ -64,7 +65,7 @@ function Chats() {
       try {
 
 
-        const res = await axios.get(`http://localhost:5000/user/coversations/${id}`, {
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/user/coversations/${id}`, {
 
           headers: {
 
@@ -108,7 +109,7 @@ function Chats() {
 
     try {
 
-      axios.post('http://localhost:5000/user/coversations', members, {
+      axios.post(`${process.env.REACT_APP_SERVER_URL}/user/conversations`, members, {
 
         headers: {
 
@@ -203,7 +204,7 @@ function Chats() {
                   <div className='chat' onClick={() => isClicked(chat)}  >
 
 
-                    <Chat_left conversation={chat}  />
+                    <Chat_left conversation={chat} />
 
                   </div>
 
@@ -224,6 +225,12 @@ function Chats() {
 
           </div>
         </div>
+      </div>
+
+      <div className="navigation_footer">
+
+        <Navigation />
+
       </div>
 
     </div>

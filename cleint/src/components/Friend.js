@@ -10,7 +10,7 @@ function Friend(props) {
 
   useEffect(() => {
 
-            axios.get(`http://localhost:5000/user/infor${props.friends._id}`, {
+            axios.get(`${process.env.REACT_APP_SERVER_URL}/user/infor${props.friends._id}`, {
 
                 headers: {
 

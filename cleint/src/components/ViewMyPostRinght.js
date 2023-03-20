@@ -8,12 +8,9 @@ function ViewMyPostRinght() {
 
       <div className="right_container">
         <div className="heading">
-          <h3>Activity</h3>
+          <h3>Matches</h3>
         </div>
-        <div className="activity">
-          <Notification />
-          
-          <Notification />
+        <div className="matches">
           
         </div>
       </div>
