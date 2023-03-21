@@ -1,32 +1,32 @@
 import React from 'react'
 import './SwipeButtons.css'
-// import ReplayIcon from '@material-ui/icons-material/Replay'
-// import CloseIcon from '@mui/icons-material/Close';
-// import StarRateIcon from '@material-ui/icons-material/StarRate'
-// import FavoriteIcon from '@material-ui/icons-material/Favorite'
-// import FlashOnIcon from '@material-ui/icons-material/FlashOn'
-// import IconButton from '@material-ui/core/IconButton'
+import ReplayIcon from '@mui/icons-material/Replay';
+import CloseIcon from '@mui/icons-material/Close';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import Button from '@mui/material/Button';
+import FlashOnIcon from '@mui/icons-material/FlashOn';
 
 function SwipeButtons() {
 
 
     return (
         <div className="swipeButtons">
-            {/* <IconButton   className="swipeButtons__repeat">
+            <Button   className="swipeButtons__repeat">
                 <ReplayIcon fontSize="large" />
-            </IconButton>
-            <IconButton   className="swipeButtons__left">
+            </Button>
+            <Button   className="swipeButtons__left">
                 <CloseIcon fontSize="large" />
-            </IconButton>
-            <IconButton   className="swipeButtons__star">
-                <StarRateIcon fontSize="large" />
-            </IconButton>
-            <IconButton   className="swipeButtons__right">
+            </Button>
+            <Button   className="swipeButtons__star">
+                <StarBorderIcon fontSize="large" />
+            </Button>
+            <Button   className="swipeButtons__right">
                 <FavoriteIcon fontSize="large" />
-            </IconButton>
-            <IconButton   className="swipeButtons__lightning">
+            </Button>
+            <Button   className="swipeButtons__lightning">
                 <FlashOnIcon fontSize="large" />
-            </IconButton> */}
+            </Button>
             
         </div>
     )
