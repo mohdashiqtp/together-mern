@@ -17,7 +17,7 @@ function App() {
 
   const login = localStorage.getItem('login')
 
- 
+
 
   return (
     <div className="App">
@@ -28,20 +28,20 @@ function App() {
           <Route path='/singup' element={<Singup />} />
           <Route path='/login' element={<Login />} />
 
-          { login ?
+          {/* { login ? */}
 
 
-            
-<Route path='/match' element={ <Match /> } />
-            
-            : window.location.assign('/login') }
-            
-            <Route path='/' element={< Home />} /> 
-            <Route path ='/profile' element={<Profile/>}/>
-            <Route path='/chats:id' element={<Chats/>} />
-            <Route path='/friends:id' element={ <Friends /> } />
-            <Route path='/edit_profile' element={ <EditProfile /> } />
-            <Route path='/user/activity' element={ <Activity /> } />
+
+          <Route path='/match' element={<Match />} />
+
+          {/* : window.location.assign('/login') } */}
+
+          <Route path='/' element={< Home />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/chats:id' element={<Chats />} />
+          <Route path='/friends:id' element={<Friends />} />
+          <Route path='/edit_profile' element={<EditProfile />} />
+          <Route path='/user/activity' element={<Activity />} />
 
         </Routes>
 
