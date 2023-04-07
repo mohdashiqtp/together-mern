@@ -48,7 +48,7 @@ function Chats() {
 
     }).catch((err) => {
 
-      console.log(err)
+      // console.log(err)
     })
 
 
@@ -83,7 +83,7 @@ function Chats() {
 
       } catch (err) {
 
-        console.log(err)
+        // console.log(err)
 
       }
     }
@@ -140,7 +140,7 @@ function Chats() {
 
     socket.current.on("getUser", users => {
 
-      console.log(users)
+      // console.log(users)
 
     })
 
@@ -169,7 +169,7 @@ function Chats() {
 
           <div className="start_conversation">
 
-            {
+            {/* {
               isLoaded ? <div className="">
                 {
                   users.map((user) => {
@@ -192,7 +192,7 @@ function Chats() {
                   ariaLabel="rings-loading"
                 />
               </div>
-            }
+            } */}
           </div>
           <div className="chat_left" >
 

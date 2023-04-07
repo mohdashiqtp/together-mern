@@ -82,7 +82,7 @@ function Singup() {
                             </Link>
                         </div>
                         <div className="submit">
-                            <button onClick={handleSubmit} className='singup_button'>Login</button>
+                            <button onClick={handleSubmit} className='singup_button'>Create Accout</button>
                         </div>
                     </form>
                 </div>

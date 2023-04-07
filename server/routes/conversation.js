@@ -5,8 +5,10 @@ const auth = require('../middlewares/auth')
 
 router.post('/', async (req, res) => {
 
+    console.log(req.body)
 
     try {
+
 
         const newConversation = new conversation({
 

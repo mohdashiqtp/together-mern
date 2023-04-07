@@ -18,36 +18,33 @@ const postController = {
 
 
             const { captions, imageData } = req.body
+            
+           const result = await cloudinary.uploader.upload(imageData)
 
-            await cloudinary.uploader.upload(imageData, { folder: "posts" }).then((result) => {
-                console.log(res)
+           console.log(res)
 
-                User.findById(req.user.id, (err, user) => {
+           User.findById(req.user.id, (err, user) => {
 
-                    var PostModel = new Posts()
-                    PostModel.id = req.user.id
-                    PostModel.captions = captions
-                    PostModel.image = result.secure_url
-                    PostModel.image_id = result.public_id
-                    PostModel.like = {}
-                    PostModel.comment = {}
-                    user.posts.push(PostModel)
-                    user.save()
+            var PostModel = new Posts()
+            PostModel.id = req.user.id
+            PostModel.captions = captions
+            PostModel.image = result.secure_url
+            PostModel.image_id = result.public_id
+            PostModel.like = {}
+            PostModel.comment = {}
+            user.posts.push(PostModel)
+            user.save()
 
-                    console.log(user)
-
-
-                    if (err) return res.status(400).json({ err })
+            console.log(user)
 
 
-                    res.status(200).json({ msg: 'profile updated', user })
+            // if (err) return res.status(400).json({ err })
+            
+        
 
-                })
-
-
-            }).catch((err) => {
-                console.log(err)
-            })
+        }).catch((err) => {
+            console.log(err)
+        })
 
 
         } catch (err) {

@@ -99,7 +99,7 @@ function Chat_body(props) {
 
     try {
 
-      await axios.post(`${process.env.REACT_APP_SERVER_URL}/userconversations/messages/`, data)
+      await axios.post(`${process.env.REACT_APP_SERVER_URL}/user/conversations/messages/`, data)
 
 
     } catch (err) {

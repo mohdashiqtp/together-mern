@@ -48,9 +48,7 @@ router.get('/logout' , userController.logout)
 
 // searchUser 
 
-
 router.get('/search' , userController.searchUser)
-
 
 // fetching all users
 

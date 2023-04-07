@@ -30,6 +30,10 @@ function AddPost() {
 
     const Submit = (e) => {
 
+        console.log('button clicked')
+
+        console.log(image)
+
         e.preventDefault()
 
         const formData = new FormData()
@@ -37,6 +41,7 @@ function AddPost() {
         formData.append('image', image.data)
         formData.append('captions', post.captions)
         formData.append('imageData', previewSource)
+
 
         axios.post(`${process.env.REACT_APP_SERVER_URL}/posts/addpost`, formData, {
 
@@ -65,6 +70,8 @@ function AddPost() {
 
     const handleFileInput = (e) => {
 
+        console.log(e.target.files[0])
+
         setImage({
 
             data: e.target.files[0]
@@ -90,6 +97,7 @@ function AddPost() {
     }
 
 
+
     return (
         <div className="addpost">
 
@@ -104,12 +112,12 @@ function AddPost() {
                 {
                     previewSource && (
 
-                        <img src={previewSource} />
+                        <img clasName='preview' src={previewSource} />
 
                     )
                 }
 
-                <input type="file" name="file" id="file" class="inputfile" />
+                <input onChange={handleFileInput} className='addpost_input'  type="file"  name="file" id="file" class="inputfile" />
                 <label for="file">Choose a file</label>
             </div>
             <div className="button" onClick={Submit}>

@@ -36,6 +36,8 @@ function Chat_right(props) {
 
         const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/user/conversations/messages/${props.conversation._id}`)
 
+        console.log(res)
+
         setChat(res.data.message)
 
 

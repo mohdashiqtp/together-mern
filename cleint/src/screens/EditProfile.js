@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useContext } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import './editprofile.css'
 import GlobalContext from '../GlobalState'
 import Avatar from '@mui/material/Avatar';
@@ -13,6 +14,8 @@ function EditProfile() {
 
   const data = useContext(GlobalContext)
 
+  const [updated, isUpdated] = useState(false)
+
 
 
   const [user, setUser] = useState({
@@ -20,16 +23,24 @@ function EditProfile() {
     name: '',
     email: '',
     number: '',
-    gender : '',
-    lookingfor:'',
-    place:'',
-    interest:''
+    gender: '',
+    lookingfor: '',
+    place: '',
+    interest: ''
 
 
   })
 
 
   const handleSubmit = async (e) => {
+
+
+
+    console.log(user)
+
+
+
+    console.log('Button clicked')
 
     e.preventDefault()
 
@@ -44,25 +55,30 @@ function EditProfile() {
     formData.append('number', user.number)
 
     formData.append('email', user.email)
-    
-    formData.append('email', user.place)
-    
-    formData.append('email', user.interest)
-    
-    formData.append('email', user.gender)
-    
-    formData.append('email', user.lookingfor)
+
+    formData.append('place', user.place)
+
+    formData.append('interest', user.interest)
+
+    formData.append('gender', user.gender)
+
+    formData.append('lookingfor', user.lookingfor)
+
 
 
     try {
 
-      const res = axios.post(`${process.env.REACT_APP_SERVER_URL}/user/editprofile`, formData, {
+     axios.post(`${process.env.REACT_APP_SERVER_URL}/user/edit_profile`, formData, {
 
         withCredentials: true
 
-      })
+      }).then((res) => {
 
-      alert("updated")
+        console.log(res)
+
+      } ).catch(( err ) => {
+        console.log(err)
+      })
 
     } catch (err) {
 
@@ -100,10 +116,13 @@ function EditProfile() {
 
   const handleChange = (e) => {
 
+
     const { name, value } = e.target
 
 
     setUser({ ...user, [name]: value })
+
+
 
 
   }
@@ -118,7 +137,7 @@ function EditProfile() {
 
           )
         }
-        <input type="file" name='image'  onChange={handleFileChange} />
+        <input type="file" name='image' onChange={handleFileChange} />
       </div>
 
       <div className="name">
@@ -130,40 +149,43 @@ function EditProfile() {
         <span>Number</span>
         <input type="text" name="number" onChange={handleChange} />
       </div>
-
-      <div className="gender">
-        <label for="gender">Gender:</label>
-      <select id="gender" name="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
+      <div className="email">
+        <span>Email</span>
+        <input type="text" name="email" onChange={handleChange} />
       </div>
-      
+
+      <div className="gender" onChange={handleChange}>
+        <label for="gender">Gender:</label>
+        <input type="radio" value='Male' name="gender" /> Male
+        <input type="radio" value='Female' name="gender" /> Female
+        <input type="radio" value='Other' name="gender" /> Other
+
+      </div>
+
 
       <div className="place">
         <span>Place</span>
         <input type="text" name="place" onChange={handleChange} />
       </div>
-      <div className="looking for">
-        <label for="gender">Looking For:</label>
-      <select id="gender" name="lookingfor">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
+      <div className="lookingfor" onChange={handleChange}>
+        <label for="lookingfor">Looking For:</label>
+        <input type="radio" value='Male' name="lookingfor" /> Male
+        <input type="radio" value='Female' name="lookingfor" /> Female
+        <input type="radio" value='Other' name="loongfor" /> Other
       </div>
-      
+
       <div className="interest">
         <span>Interests</span>
         <input type="text" name="interest" onChange={handleChange} />
       </div>
 
 
-      <div className="continue">
-      <div className="button">
-        <a onClick={handleSubmit} >Continue</a>
-      </div>
+
+      <div onClick={handleSubmit} className="continue">
+      <Link to='/'>
+
+          <h4 >Continue</h4>
+          </Link>
       </div>
 
     </div>

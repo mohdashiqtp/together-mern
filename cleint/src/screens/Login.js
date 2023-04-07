@@ -48,14 +48,12 @@ function Login() {
 
         e.preventDefault()
 
-        //submit our data to backend and return the result 
+        //submit our data to backend 
 
         axios.post(`${process.env.REACT_APP_SERVER_URL}/user/login` , {...user} , {
             withCredentials:true
         }).
         then((res) => {
-
-            // then code here
 
             if(res.data.accesstoken){
 

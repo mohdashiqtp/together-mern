@@ -12,6 +12,8 @@ router.post('/', async (req, res) => {
 
         const savedMessage = await newMessage.save()
 
+        console.log(savedMessage)
+
 
         res.status(200).json({ savedMessage })
 

@@ -41,7 +41,7 @@ function ViewMyPost(props) {
                         <div className="following">
 
                             <h3>{friends.length}</h3>
-                            <p>friends</p>
+                            <p>Mtches</p>
 
                         </div>
                     </Link>

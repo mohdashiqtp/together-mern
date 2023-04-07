@@ -34,6 +34,8 @@ const UserApi = (token) => {
 
         }).then( (res) => {
 
+            console.log(res)
+
 
             setIsLogged(true)
 
@@ -74,8 +76,10 @@ const UserApi = (token) => {
         profile,
         id,
         freinds,
-        posts
+        posts,username
     }
+
+    console.log(Data)
 
    return(
 

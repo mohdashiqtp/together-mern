@@ -18,7 +18,7 @@
     padding: 10px;
     height : 550px ;
     /* overflow-y: scroll; */
-    width: 350px;
+    width: 50px;
 }
 .chat_body{
     display: flex;

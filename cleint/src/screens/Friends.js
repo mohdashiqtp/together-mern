@@ -16,10 +16,12 @@ function Friends() {
         <div className="friends_conatiner">
 
             <div className="heading">
-                <h1>Friends</h1>
+                <h1>Matches</h1>
             </div>
 
             <div className="friendslist">
+
+              
 
               {
                 friends && friends.map((friend)=>{

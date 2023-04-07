@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState , useEffect } from 'react'
 import Header from '../components/Header'
 import MatchCards from '../components/MatchCards'
 import Navigation from '../components/Navigation'
@@ -6,6 +6,8 @@ import SwipeButtons from '../components/SwipeButtons'
 import './Match.css'
 
 export default function Match() {
+
+    
     return (
         <div className="Match">
 
@@ -19,9 +21,8 @@ export default function Match() {
             </div>
             <div className="matchBody">
 
-                <MatchCards />
+                <MatchCards  />
 
-                <SwipeButtons />
 
             </div>
             <div className="navigation">

@@ -9,6 +9,7 @@ import Chats from './screens/Chats'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Match from './screens/Match';
 import Activity from './screens/Activity';
+import ViewUser from './screens/ViewUser';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
           <Route path='/' element={< Home />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/view_profile:id' element={<ViewUser />} />
           <Route path='/chats:id' element={<Chats />} />
           <Route path='/friends:id' element={<Friends />} />
           <Route path='/edit_profile' element={<EditProfile />} />

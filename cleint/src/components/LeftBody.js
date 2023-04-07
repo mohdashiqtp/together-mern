@@ -50,6 +50,8 @@ function LeftBody() {
     }, [])
 
     useEffect(() => {
+        
+        console.log(friends)
 
         if (friends) {
 
@@ -72,6 +74,8 @@ function LeftBody() {
                     setUser(res.data.user)
 
                     setIsUser(true)
+
+                    console.log(res)
 
 
 

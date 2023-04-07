@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import { GlobalContext } from '../GlobalState';
 import axios from 'axios'
 import './Post.css'
+import { Link } from 'react-router-dom';
 
 function Post(props) {
 
@@ -108,13 +109,12 @@ function Post(props) {
 
     } , [ likes ])
 
-    console.log(likeCount && likeCount.length)
-
     
    
 
     return (
         <div className="post">
+        <Link to='/view_profile:id' state={{ user : props.user }}>
             <div className="post_header">
 
                 <div className="profile">
@@ -126,7 +126,7 @@ function Post(props) {
                     <a>{props.user.username}</a>
                 </div>
 
-            </div>
+            </div></Link>
             <div className="post_body">
 
                 <div className="post_image">

@@ -13,6 +13,9 @@
     display: flex;
     justify-content: center;
     
+}
+.matchcards{
+    
     height: 450px;
 }
 .swipe{
@@ -26,5 +29,5 @@
     position: absolute;
     bottom: 0;
     margin: 10px;
-    color: #fff;
+    color: #171616;
 }

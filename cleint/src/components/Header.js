@@ -13,7 +13,10 @@ import { GlobalContext } from '../GlobalState';
 
 function Header(props) {
 
+
+
     const data = useContext(GlobalContext)
+
 
 
     const logoutClicked = () => {
@@ -58,7 +61,7 @@ function Header(props) {
 
             <div className="right_side">
 
-                <h3>hi {data.Data.userApi.Data.username}</h3>
+                <h4>{data.Data.userApi.Data.username}</h4>
 
                 <div className="avatar">
                     <Link to='/edit_profile'>

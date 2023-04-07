@@ -32,34 +32,34 @@ function Home() {
 
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        axios.get(`${process.env.REACT_APP_SERVER_URL}/user/getall`, {
+    //     axios.get(`${process.env.REACT_APP_SERVER_URL}/user/getall`, {
 
-            headers: {
+    //         headers: {
 
-                "Authorization": `Bearer ${data.Data.userApi.Data.token}`
+    //             "Authorization": `Bearer ${data.Data.userApi.Data.token}`
 
-            },
+    //         },
 
-            withCredentials: true,
+    //         withCredentials: true,
 
-        }).then((result) => {
+    //     }).then((result) => {
 
-            setUsers(result.data.user)
+    //         setUsers(result.data.user)
 
-            setIsUser(true)
-
-
-
-        }).catch((err) => {
-
-            console.log(err)
-        })
+    //         setIsUser(true)
 
 
 
-    }, [data.Data.userApi.token])
+    //     }).catch((err) => {
+
+    //         console.log(err)
+    //     })
+
+
+
+    // }, [data.Data.userApi.token])
 
 
     const peopleClicked = async (user) => {
@@ -105,8 +105,6 @@ function Home() {
         }
     }
 
-    console.log(search)
-
 
 
     return (
@@ -133,13 +131,7 @@ function Home() {
 
             </div>
 
-            <div className="add_posts">
 
-                <h4>Add post</h4>
-
-                <AddPost />
-
-            </div>
 
 
 
@@ -151,8 +143,15 @@ function Home() {
 
                 </div>
                 <div className="right_section">
+                    <div className="add_posts">
 
-                    <div className="Peoples">
+                        <h4>Add post</h4>
+
+                        <AddPost />
+
+                    </div>
+
+                    {/* <div className="Peoples">
 
 
                         {
@@ -187,7 +186,7 @@ function Home() {
 
 
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="navigation">

@@ -32,9 +32,15 @@ const friendController = {
         try {
     
             const friend = req.params.id
+
     
     
              User.findById(req.params.user, (err, user) => {
+
+                console.log(err)
+
+                if(err) return res.status(400)
+
     
                 var friendsModel = new Friends()
                 friendsModel._id = friend
@@ -45,7 +51,7 @@ const friendController = {
     
     
     
-                res.status(200).json({ msg: 'friend added' })
+                res.status(200).json({ msg: 'Matched' })
     
     
     
