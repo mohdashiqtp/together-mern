@@ -1,7 +1,12 @@
-# together-mern
+# together
 
 
-A complete social media app where user can share memories add posts giving likes chat with friends
+Together is a complete social media application built in frontend as React js and Backend as express node js 
+
+app has several feutures like posting  , like , comment
+
+user profile , chatting through friends
+
 
 
 
